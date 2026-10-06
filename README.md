@@ -1,12 +1,12 @@
-[![Run Rest Assured API Tests](https://github.com/Nagraggini/petstore/actions/workflows/maven-tests.yml/badge.svg)](https://github.com/Nagraggini/petstore/actions/workflows/maven-tests.yml)
+[![Run Rest Assured API Tests](https://github.com/Nagraggini/dummy-json/actions/workflows/maven-tests.yml/badge.svg)](https://github.com/Nagraggini/dummy-json/actions/workflows/maven-tests.yml)
 
-![Top Language](https://img.shields.io/github/languages/top/Nagraggini/petstore)
+![Top Language](https://img.shields.io/github/languages/top/Nagraggini/dummy-json)
 ![Rest Assured](https://img.shields.io/badge/Rest%20Assured-API-orange) ![License](https://img.shields.io/badge/license-MIT-green)
 
 
-## REST API Tests: Swagger Petstore 
+## REST API Tests: Dummy JSON
 
-This repository contains an automated REST API test suite for the [Swagger Petstore API](https://petstore.swagger.io/).
+This repository contains an automated REST API test suite for the [Dummy JSON](https://dummyjson.com/).
 
 The project demonstrates API testing using REST Assured, JUnit 5, Maven, Allure Report, and GitHub Actions CI/CD.
 
@@ -15,7 +15,7 @@ The project demonstrates API testing using REST Assured, JUnit 5, Maven, Allure 
 The automated test results and execution reports are generated and published automatically via GitHub Actions:
 
 ![Allure Report](docs/assets/img/allure_report.png)
-📊 [View the Allure Report](https://nagraggini.github.io/petstore/)
+📊 [View the Allure Report](https://nagraggini.github.io/dummy-json/)
 
 ## Toolbox
 
@@ -45,10 +45,10 @@ To run a single test:
 
 ## Covered Test Scenarios
 
-- GET pet by ID
-- POST create new pet
-- PUT update existing pet
-- DELETE pet
+- GET user by ID
+- POST create new user
+- PUT update existing user
+- DELETE user
 - HTTP status code validation
 - Response body validation
 - JSON schema/content validation
