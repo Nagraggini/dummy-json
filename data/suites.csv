@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1484","Check status code","","Tue Oct 06 18:58:03 UTC 2026","passed","Tue Oct 06 18:58:04 UTC 2026","","api.users.userList.UserListTest","api.users.userList.UserListTest","checkStatusCode"
+"","1449","Check status code","","Tue Oct 06 19:00:22 UTC 2026","passed","Tue Oct 06 19:00:24 UTC 2026","","api.users.userList.UserListTest","api.users.userList.UserListTest","checkStatusCode"
