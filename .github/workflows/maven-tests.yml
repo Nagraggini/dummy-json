@@ -13,18 +13,30 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            # =========================
+            # Checkout repository
+            # =========================
             - name: Checkout repository
               uses: actions/checkout@v4
 
+            # =========================
+            # Set up Java 21
+            # =========================
             - name: Set up JDK21
               uses: actions/setup-java@v4
               with:
                   distribution: "temurin"
                   java-version: "21"
 
+            # =========================
+            # Run Maven tests
+            # =========================
             - name: Run Maven Tests
-              run: mvn -B clean test -DCI=true
+              run: ./mvnw -B clean test -DCI=true
 
+            # =========================
+            # Upload Surefire test reports
+            # =========================
             - name: Upload surefire test reports
               uses: actions/upload-artifact@v4
               with:
@@ -38,6 +50,17 @@ jobs:
               run: ./mvnw allure:report
 
             # =========================
+            # Check Allure files
+            # =========================
+            - name: Check Allure Report
+              run: |
+                  echo "=== Allure results ==="
+                  find target/allure-results -maxdepth 1 -type f | head -20
+
+                  echo "=== Generated Allure report ==="
+                  find target/site/allure-maven-plugin -maxdepth 2 -type f | head -50
+
+            # =========================
             # Prepare GitHub Pages folder
             # =========================
             - name: Prepare GitHub Pages folder
@@ -45,8 +68,10 @@ jobs:
                   rm -rf public
                   mkdir -p public
 
-                  cp -r target/site/allure-maven-plugin/* public/ 2>/dev/null || true
-                  cp -r target/site/allure-report/* public/ 2>/dev/null || true
+                  cp -r target/site/allure-maven-plugin/* public/
+
+                  echo "=== Public folder ==="
+                  find public -maxdepth 2 -type f | head -50
 
             # =========================
             # Deploy to GitHub Pages
