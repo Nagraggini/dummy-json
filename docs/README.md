@@ -96,14 +96,6 @@ Az Eclipseben ctrl+D -vel lehet törölni az adott sort.
 		    <version>7.10.2</version>
 		    <scope>test</scope>
 		</dependency>
-		
-		<!-- Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
-		<dependency>
-		    <groupId>com.googlecode.json-simple</groupId>
-		    <artifactId>json-simple</artifactId>
-		    <version>1.1.1</version>
-		    <scope>compile</scope>
-		</dependency>
 
 Ha nem tölti le a függőségeket, akkor főmenü Project-> Clean -> Clean
 
