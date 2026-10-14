@@ -125,3 +125,18 @@ A jelölőnégyzetet kipipálod, amjd alul Next-re nyomj, Next -> Finish.
 
 Tesztelendő alkalmazás:
 https://dummyjson.com/docs/posts#posts-all
+
+# Helyi REST API  készítése tesztelésre
+
+A cmd-be írd be, hogy megnézd fel vannak-e telepítve, ha nincsenek akkor telepítsd. 
+[Innen tudod letölteni.](https://nodejs.org/en/download/current)
+
+`node -v`
+`npm -v`
+
+Fake api -> https://github.com/typicode/json-server
+Terminálba ezt írd be:
+`npm install -g json-server`
+
+[Itt a videó róla[(https://www.youtube.com/watch?v=V7sLq7u28BA&list=PLhW3qG5bs-L8xPrBwDv66cTMlFNeUPdJx&index=9)
+
