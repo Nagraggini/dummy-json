@@ -96,6 +96,14 @@ Az Eclipseben ctrl+D -vel lehet törölni az adott sort.
 		    <version>7.10.2</version>
 		    <scope>test</scope>
 		</dependency>
+		
+		<!-- Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		    <scope>compile</scope>
+		</dependency>
 
 Ha nem tölti le a függőségeket, akkor főmenü Project-> Clean -> Clean
 
@@ -117,3 +125,18 @@ A jelölőnégyzetet kipipálod, amjd alul Next-re nyomj, Next -> Finish.
 
 Tesztelendő alkalmazás:
 https://dummyjson.com/docs/posts#posts-all
+
+# Helyi REST API  készítése tesztelésre
+
+A cmd-be írd be, hogy megnézd fel vannak-e telepítve, ha nincsenek akkor telepítsd. 
+[Innen tudod letölteni.](https://nodejs.org/en/download/current)
+
+`node -v`
+`npm -v`
+
+Fake api -> https://github.com/typicode/json-server
+Terminálba ezt írd be:
+`npm install -g json-server`
+
+[Itt a videó róla[(https://www.youtube.com/watch?v=V7sLq7u28BA&list=PLhW3qG5bs-L8xPrBwDv66cTMlFNeUPdJx&index=9)
+
