@@ -14,7 +14,7 @@ The project demonstrates API testing using REST Assured, JUnit 5, Maven, Allure 
 
 The automated test results and execution reports are generated and published automatically via GitHub Actions:
 
-![Allure Report](docs/assets/img/allure_report.png)
+![Allure Report](docs/assets/img/allure_report.png)             
 📊 [View the Allure Report](https://nagraggini.github.io/dummy-json/)
 
 ## Toolbox
