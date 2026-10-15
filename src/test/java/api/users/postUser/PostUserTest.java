@@ -1,9 +1,12 @@
-package postUser;
+package api.users.postUser;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.json.simple.JSONObject;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import io.restassured.http.ContentType;
 
@@ -34,7 +37,7 @@ class PostUserTest {
 	          
 	        baseURI = "https://dummyjson.com";
 
-	        given()
+	     String id=   given()
 	        	.header("Content-Type","application/json")
 	        	.contentType(ContentType.JSON)
 	        	.accept(ContentType.JSON)
@@ -44,7 +47,10 @@ class PostUserTest {
 	        .then()
 	        	.statusCode(201)
 	        	//.log().all()
-	        	.log().ifValidationFails();
+	        	.log().ifValidationFails()
+	        	.extract().jsonPath().getString("id");
+	     
+	     assertEquals(id,"209");
 	 }
 
 }
